@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="A JavaScript flash cards application."
+  >
+  <title>Flash Cards</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="flash.css">
+</head>
+<body>
+  <!-- =====================================
+       MAIN CONTAINER
+       ===================================== -->
+  <main class="container">
+    <section class="flashcard-app">
+      <!-- =================================
+           HEADER
+           ================================= -->
+      <header class="app-header">
+        <div>
+          <span class="eyebrow">
+            JavaScript Practice
+          </span>
+          <h1>
+            Flash Cards
+          </h1>
+        </div>
+        <div class="card-counter">
+          <span id="current-card">
+            1
+          </span>
+          <span>
+            /
+          </span>
+          <span id="total-cards">
+            10
+          </span>
+        </div>
+      </header>
+      <!-- =================================
+           PROGRESS BAR
+           ================================= -->
+      <div class="progress-container">
+        <div
+          class="progress-bar"
+          id="progress-bar"
+        ></div>
+      </div>
+      <p
+        class="progress-text"
+        id="progress-text"
+      >
+        Card 1 of 10
+      </p>
+      <!-- =================================
+           FLASHCARD
+           ================================= -->
+      <div
+        class="flashcard"
+        id="flashcard"
+        tabindex="0"
+        role="button"
+        aria-label="Flashcard. Click to reveal the answer."
+      >
+        <div class="flashcard-inner">
+          <!-- =================================
+               FRONT
+               ================================= -->
+          <div class="flashcard-face flashcard-front">
+            <span class="card-label">
+              Question
+            </span>
+            <h2 id="question">
+              What does HTML stand for?
+            </h2>
+            <p class="flip-hint">
+              Click the card to reveal the answer
+            </p>
+          </div>
+          <!-- =================================
+               BACK
+               ================================= -->
+          <div class="flashcard-face flashcard-back">
+            <span class="card-label">
+              Answer
+            </span>
+            <p id="answer">
+              HyperText Markup Language.
+            </p>
+            <p class="flip-hint">
+              Click the card to see the question
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- =================================
+           NAVIGATION
+           ================================= -->
+      <div class="navigation">
+        <button
+          type="button"
+          class="nav-button"
+          id="previous-button"
+        >
+          ← Previous
+        </button>
+        <button
+          type="button"
+          class="nav-button primary"
+          id="next-button"
+        >
+          Next →
+        </button>
+      </div>
+      <!-- =================================
+           CARD STATUS
+           ================================= -->
+      <p
+        class="completion-message"
+        id="completion-message"
+        aria-live="polite"
+      ></p>
+    </section>
+  </main>
+  <!-- JavaScript -->
+  <script src="flash.js"></script>
+</body>
+</html>
